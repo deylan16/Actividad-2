@@ -34,7 +34,16 @@ export class App extends React.Component {
         currentTime: Date.now()
       });
     }, 1000)
+    
   }
+  async clickHandler () {
+      const result = await fetchHelloWorld();
+      this.setState({
+        label: result
+      });
+      
+  };
+
 
   render() {
     return (
